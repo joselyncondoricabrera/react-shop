@@ -22,8 +22,8 @@ const App = () => {
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route exact path='/login' element={<Login />} />
+            <Route exact path='/login' element={<Home />} />
+            <Route exact path='/' element={<Login />} />
             <Route exact path='/password-recovery' element={<PasswordRecovery />} />
             <Route exact path="/send-email" element={<SendEmail />} />
             <Route exact path="/new-password" element={<NewPassword />} />
