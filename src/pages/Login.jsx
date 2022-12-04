@@ -1,10 +1,13 @@
 import React, {useRef} from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Login.scss';
 
 import logo from '@logos/logo_yard_sale.svg';
 
 const Login = () => {
 	const form = useRef(null);
+	const navigate = useNavigate();
+
     const handleSubmit = (event) => {
 		event.preventDefault();
         const formData = new FormData(form.current);
@@ -13,7 +16,12 @@ const Login = () => {
             password: formData.get('password')
         }
         console.log(data);
+
+		navigate('/home');
+
+
     }
+
 	return (
 		<div className="Login">
 			<div className="Login-container">
